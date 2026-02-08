@@ -1,0 +1,41 @@
+title: Loretale
+description: "A collaborative storytelling community through roleplay on Hytale."
+url: "https://loretale.net"
+baseurl: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: pretty
+
+collections:
+  lore:
+    output: true
+    permalink: /lore/:path/
+  guides:
+    output: true
+    permalink: /guides/:path/
+  rules:
+    output: true
+    permalink: /rules/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "lore"
+    values:
+      layout: "page"
+      category: "lore"
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "page"
+      category: "guides"
+  - scope:
+      path: ""
+      type: "rules"
+    values:
+      layout: "page"
+      category: "rules"

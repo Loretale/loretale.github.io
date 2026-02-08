@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<article class="page-content">
+  <div class="page-container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <span aria-hidden="true">/</span>
+      {% if page.category == 'lore' %}
+      <a href="{{ '/lore/' | relative_url }}">Lore</a>
+      {% elsif page.category == 'guides' %}
+      <a href="{{ '/guides/' | relative_url }}">Guides</a>
+      {% elsif page.category == 'rules' %}
+      <a href="{{ '/rules/' | relative_url }}">Rules</a>
+      {% endif %}
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ page.title }}</span>
+    </nav>
+
+    <header class="page-header">
+      <h1 class="page-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="page-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+      <div class="ornament"></div>
+    </header>
+
+    <div class="page-body prose">
+      {{ content }}
+    </div>
+  </div>
+</article>

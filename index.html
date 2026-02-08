@@ -1,103 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Loretale</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+---
+layout: default
+title: Home
+description: "Loretale is a collaborative storytelling and roleplay community on Hytale. A living world built by the
+stories its players write."
+---
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      font-family: 'Press Start 2P', monospace;
-      color: #eaffea;
-
-      background:
-        linear-gradient(
-          180deg,
-          #007180 0%,
-          #110013 100%
-        );
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-
-      background-image:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-
-      opacity: 0.3;
-      filter: contrast(200%) brightness(60%);
-      mix-blend-mode: multiply;
-    }
-
-    .card {
-      position: relative;
-      text-align: center;
-      max-width: 640px;
-      padding: 2.5rem 2rem;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 12px;
-    }
-
-    .logo {
-      width: 160px;
-      height: 160px;
-      margin-bottom: 2rem;
-      image-rendering: pixelated;
-    }
-
-    h1 {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-    }
-
-    p {
-      font-size: 0.7rem;
-      line-height: 1.8;
-      margin-bottom: 2rem;
-      color: #d9ffd9;
-    }
-
-    a {
-      display: inline-block;
-      padding: 1rem 1.5rem;
-      background: #00a6a6;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 0.7rem;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="card">
-    <img src="logo.png" alt="Pixel Logo" class="logo">
-
-    <h1>Loretale</h1>
-
-    <p>
-      Loretale is a collaborative storytelling community, through roleplay on Hytale.
-      We're currently in active development writing lore and getting infrastructure ready.
-      If you'd like to stay up to date or apply early, join our discord with the button below.
+<section class="hero">
+  <div class="hero-content">
+    <img src="logo.png" alt="Loretale emblem" class="hero-logo" width="100" height="100">
+    <h1 class="hero-title">Loretale</h1>
+    <p class="hero-subtitle">A collaborative storytelling experience</p>
+    <div class="ornament"></div>
+    <p class="hero-text">
+      Loretale is a collaborative storytelling community on Hytale. We encourage telling stories through roleplay, with
+      all our mods, rules, and lore made with these goals in mind.
     </p>
-
-    <a href="https://discord.gg/FrKGmZf83V" target="_blank">
-      Join the Discord
-    </a>
+    <div class="hero-actions">
+      <a href="https://discord.gg/FrKGmZf83V" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join the
+        Discord</a>
+      <a href="{{ '/lore/' | relative_url }}" class="btn btn-outline">Explore the Lore</a>
+    </div>
   </div>
-</body>
-</html>
+</section>
+
+<section class="pillars">
+  <div class="pillars-inner">
+    <div class="section-heading">
+      <h2>What We Believe</h2>
+      <div class="ornament"></div>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <h3>Storytelling</h3>
+        <p>
+          Storytelling is key to the community, with the primary aim of the platform and server being collaborative
+          storytelling through roleplay. All platforms, mods, plugins, and rules should be made to enable this goal.
+        </p>
+      </div>
+      <div class="pillar-card">
+        <h3>Collaboration</h3>
+        <p>
+          Collaboration is important to keep a healthy community. This means listening to community feedback, and
+          allowing the community to have a say in the development of the story, lore, and mods for the server, such as
+          through
+          <a href="https://github.com/Loretale" target="_blank" rel="noopener noreferrer">GitHub</a>. It also means that
+          out of character collaboration and communication between players is encouraged: if you want to hit certain
+          story points for your character, feel free to ask and communicate with other players what you would like to
+          happen and see if anyone can enable in this. On a larger scale, this might mean nations may announce
+          beforehand what their plans are for a war, so that people can participate in a way that is of interest of
+          their character. This does not, however, excuse metagaming, where information that the character does not know
+          is used in character.
+        </p>
+      </div>
+      <div class="pillar-card">
+        <h3>Agency</h3>
+        <p>
+          Agency is the importance of players to tell a story without staff intervention. It also means the ability for
+          players to regulate their own internal community. In addition, it concerns the ability for people to control
+          what their own characters do. This does not excuse powergaming, where a character is made out to be more
+          powerful than they actually are, going beyond realistic ability. Neither does it free people or their
+          characters from consequences: actions that are taken will be remembered by others, and may influence how they
+          interact with you or your character.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="explore">
+  <div class="explore-inner">
+    <div class="section-heading">
+      <h2>Explore</h2>
+      <div class="ornament"></div>
+    </div>
+    <div class="explore-grid">
+      <a href="{{ '/lore/' | relative_url }}" class="explore-card">
+        <h3>The Lore</h3>
+        <p>The foundations of our fictional world.</p>
+        <span class="card-arrow">Read more ›</span>
+      </a>
+      <a href="{{ '/guides/' | relative_url }}" class="explore-card">
+        <h3>Guides</h3>
+        <p>How to join, create a character, find your footing in the world, and use our plugins.</p>
+        <span class="card-arrow">Read more ›</span>
+      </a>
+      <a href="{{ '/rules/' | relative_url }}" class="explore-card">
+        <h3>Rules</h3>
+        <p>What we expect from you and what you can expect from us, to keep the server a welcome place.</p>
+        <span class="card-arrow">Read more ›</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="ornament"></div>
+  <h2>Apply Now!</h2>
+  <p>
+    We've just launched as very early alpha, and applications are being accepted through Discord. We look forward to
+    your input, feedback, and the stories you tell &lt;3.
+  </p>
+  <a href="https://discord.gg/FrKGmZf83V" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join
+    Discord</a>
+</section>

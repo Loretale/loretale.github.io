@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<section class="collection-index">
+  <div class="page-container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ page.title }}</span>
+    </nav>
+
+    <header class="page-header">
+      <h1 class="page-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="page-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+      <div class="ornament"></div>
+    </header>
+
+    {% if page.description %}
+    <div class="collection-description prose">
+      <p>{{ page.description }}</p>
+    </div>
+    {% endif %}
+
+    <div class="card-grid">
+      {% assign collection = site[page.collection_name] | sort: "order" %}
+      {% for item in collection %}
+      <a href="{{ item.url | relative_url }}" class="entry-card">
+        <div class="entry-card-inner">
+          <h2>{{ item.title }}</h2>
+          {% if item.summary %}
+          <p>{{ item.summary }}</p>
+          {% endif %}
+          <span class="read-more">Read More →</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

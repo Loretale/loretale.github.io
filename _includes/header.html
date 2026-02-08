@@ -1,0 +1,31 @@
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="{{ '/' | relative_url }}" class="site-brand" aria-label="Loretale — Home">
+      <img src="{{ '/logo.png' | relative_url }}" alt="" class="site-logo" width="36" height="36">
+      <span class="site-name">Loretale</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a>
+      <a href="{{ '/lore/' | relative_url }}"
+        class="nav-link{% if page.url contains '/lore' %} active{% endif %}">Lore</a>
+      <a href="{{ '/guides/' | relative_url }}"
+        class="nav-link{% if page.url contains '/guides' %} active{% endif %}">Guides</a>
+      <a href="{{ '/rules/' | relative_url }}"
+        class="nav-link{% if page.url contains '/rules' %} active{% endif %}">Rules</a>
+      <a href="https://discord.gg/FrKGmZf83V" target="_blank" rel="noopener noreferrer"
+        class="nav-link nav-cta">Discord</a>
+    </nav>
+  </div>
+</header>
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', function () {
+    var nav = document.getElementById('site-nav');
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('open');
+    this.classList.toggle('open');
+  });
+</script>
